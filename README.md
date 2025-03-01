@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# Doomsday Clock
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web application that monitors global risk levels through news analysis and sentiment assessment.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Fetches real-time news headlines about global conflicts, nuclear threats, climate change, and international tensions
+- Performs sentiment analysis using Mistral AI to generate risk assessment scores
+- Visualizes global risk through:
+  - A dynamic clock face that moves closer to midnight as risk increases
+  - Color-coded risk indicator
+  - Real-time dashboard of contributing headlines
+- Auto-updates every 3 hours
 
-### `npm start`
+## Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository
+2. Create a `.env` file in the root directory with the following variables:
+   ```
+   REACT_APP_NEWS_API_KEY=your_newsapi_key_here
+   REACT_APP_MISTRAL_API_KEY=your_mistral_api_key_here
+   ```
+3. Install dependencies:
+   ```
+   npm install
+   ```
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- React with TypeScript
+- Material-UI for styling
+- React Query for data fetching
+- Framer Motion for animations
+- NewsAPI.org for news headlines
+- Mistral AI for sentiment analysis
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Note
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+You'll need to obtain API keys from:
+- [NewsAPI.org](https://newsapi.org/)
+- [Mistral AI](https://mistral.ai/)
