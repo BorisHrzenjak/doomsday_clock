@@ -28,6 +28,35 @@ A React-based web application that monitors global risk levels through news anal
    ```
    npm start
    ```
+   or alternatively:
+   ```
+   npm run dev
+   ```
+
+## Deployment to Vercel
+
+1. Create a Vercel account if you don't have one already
+2. Install the Vercel CLI:
+   ```
+   npm install -g vercel
+   ```
+3. Login to Vercel:
+   ```
+   vercel login
+   ```
+4. Add your NewsAPI key as a secret in Vercel:
+   ```
+   vercel secrets add news_api_key your_newsapi_key_here
+   ```
+5. Deploy your application:
+   ```
+   vercel
+   ```
+6. For production deployment:
+   ```
+   vercel --prod
+   ```
+> **Note:** The free tier of NewsAPI doesn't allow direct browser requests in production environments. This project uses a serverless function to proxy the requests in production.
 
 ## Technologies Used
 

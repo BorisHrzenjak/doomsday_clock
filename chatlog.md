@@ -41,3 +41,16 @@
 - Used shouldForwardProp to prevent prop conflicts with MUI components
 - Added dynamic content that changes based on risk severity
 - Implemented responsive layout using Material-UI's breakpoint system
+
+### Deployment Fix (2025-03-01)
+- Fixed NewsAPI 426 error in production environment
+- Created a serverless API endpoint to proxy NewsAPI requests
+- Added `/api/news.js` serverless function to handle API requests on the server side
+- Updated `newsService.ts` to use different endpoints in development vs. production
+- Added Vercel configuration file (`vercel.json`) to set up API routes and environment variables
+- Updated README.md with detailed deployment instructions
+- Added note about NewsAPI limitations in production environments
+
+### Development Workflow Improvements (2025-03-01)
+- Added `dev` script alias in package.json to support both `npm start` and `npm run dev` commands
+- Updated documentation to clarify development server commands
